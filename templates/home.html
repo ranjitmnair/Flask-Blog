@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogify</title>
+</head>
+<body>
+    <h3>Welcome to my Blog!</h3>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <ul>
+        {% for post_id,post in blog['posts'].items()  %}
+        <li><a href="{{url_for('posts',post_id=post_id)}}">{{ post['title'] }}</a></li>
+        {% endfor %}</a>
+        
+    </ul>
+</body>
+</html>
